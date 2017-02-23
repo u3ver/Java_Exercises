@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.Scanner;
 
 /**
@@ -39,10 +41,12 @@ public class Ex5_1 {
             deposit =(deposit + (deposit * (percent / 100.0)));
             K++;
         }
+        S = ((int)(deposit * 1000.0))/1000.0;
         return K;
     }
 
     public static void print_term() {
         System.out.println("Размер вклада привысит "+deposit_final+" через "+countTerm(P, deposit_start, deposit_final)+" месяцев");
+        System.out.println("Сумма вклада через "+K+" месяцев будет =\t\t\t"+S);
     }
 }
