@@ -11,7 +11,6 @@ public class Ex5_1 {
     static int deposit_final = 1100;
     static  int K = 0;
     static  double S = 0.0;
-    //      0   <   p   <   25   процентная ставка
     static  int P = 0;
 
     public static void main(String[] args) {
@@ -35,7 +34,6 @@ public class Ex5_1 {
     }
 
     public static void countTerm(int percent, double deposit, int depositfinal) {
-
         while (depositfinal>=deposit) {
             deposit =(deposit + (deposit * (percent / 100.0)));
             K++;
