@@ -16,6 +16,7 @@ public class Ex5_1 {
 
     public static void main(String[] args) {
         init();
+        countTerm(P, deposit_start, deposit_final);
         print_term();
     }
 
@@ -33,18 +34,17 @@ public class Ex5_1 {
         scan.close();
     }
 
-    public static int countTerm(int percent, double deposit, int depositfinal) {
-        double dep = deposit;
+    public static void countTerm(int percent, double deposit, int depositfinal) {
+
         while (depositfinal>=deposit) {
             deposit =(deposit + (deposit * (percent / 100.0)));
             K++;
         }
         S = ((int)(deposit * 1000.0))/1000.0;
-        return K;
     }
 
     public static void print_term() {
-        System.out.println("Размер вклада привысит "+deposit_final+" через "+countTerm(P, deposit_start, deposit_final)+" месяцев");
+        System.out.println("Размер вклада привысит "+deposit_final+" через "+K+" месяцев");
         System.out.println("Сумма вклада через "+K+" месяцев будет =\t\t\t"+S);
     }
 }
