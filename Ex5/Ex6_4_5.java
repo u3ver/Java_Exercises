@@ -31,7 +31,7 @@ public class Ex6_4_5 {
     }
 
     public static int lastMaxK() {
-        for (int i = array.length-1 ; i >= 0; i++) {
+        for (int i = array.length-1 ; i >= 0; i--) {
             if (k < array[i]) {
                 return i;
             }
@@ -44,8 +44,4 @@ public class Ex6_4_5 {
         System.out.println("Индекс первого элемента >\t\t\t"+k+" = "+firstMaxK());
         System.out.println("Индекс последнего элемента >\t\t"+k+" = "+lastMaxK());
     }
-
 }
-
-
-
